@@ -21,19 +21,41 @@ function startTracker(){
 {
     //what would you like to do?
     //view all departments, view all roles, view all employees, add a department, add a role, add an employee, update an employee role 
-    type: "input",
-    name: "fileName",
-    message: "This is a test message",
-},
-
-{
-    //
-},
-
-
-
+    type: "list",
+    name: "userAction",
+    message: "Welcome to the Shawn's Employee Tracker! What would you like to do?",
+    choices: ["View all departments", "View all roles", "View all employees", "Add a department", "Add a role", "Add an employee", "Update an employee role"],
+}
 ]).then((data) => {
-    console.log("Hello, world");
+    switch (data.userAction){
+        case "View all departments":
+            viewAllDepartments.viewAllDepartments();
+         break; 
+         //I wonder...when I dive into the sql, is it going to return a data object that then needs to get processed by another .then? 
+         case "View all roles":
+            viewAllRoles.viewAllRoles();
+            break; 
+
+         case "View all employees":
+            viewAllEmployees.viewAllEmployees();
+            break;
+
+         case "Add a department":
+            addADepartment.addADepartment();
+            break;
+
+         case "Add a role":
+            addARole.addARole();
+            break;
+
+         case "Add an employee":
+            addAnEmployee.addAnEmployee();
+            break;
+
+         case "Update an employee role":
+            updateAnEmployeeRole.updateAnEmployeeRole();
+            break;    
+    }
 })
 }
 
