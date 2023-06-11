@@ -1,8 +1,24 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const mysql = require("mysql2");
+
 
 function viewAllDepartments(){
-    console.log("The departments will display here someday");
+    const db = mysql.createConnection(
+        {
+            user: "root",
+            password: "password",
+            database: "business_db"
+        },
+        console.log("Connected to the business_db database")
+    );
+
+    db.query(`SELECT * FROM departments;`, (err, result) => {
+        if (err){
+            console.log(err);
+        }
+        console.log(result);
+    });
 }
 
 module.exports = {viewAllDepartments};

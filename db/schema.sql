@@ -14,7 +14,7 @@ CREATE TABLE departments (
 -- name VARCHAR(30) -- 
 
 CREATE TABLE roles (
-    id INT NOT NULL, 
+    id INT AUTO_INCREMENT NOT NULL, 
     title VARCHAR(30),
     salary DECIMAL, 
     department_id INT,
@@ -29,7 +29,7 @@ CREATE TABLE roles (
 -- department_id INT (FK) == connected to department id-- 
 
 CREATE TABLE employees (
-    id INT NOT NULL,
+    id INT AUTO_INCREMENT NOT NULL,
     first_name VARCHAR(100),
     last_name VARCHAR(100),
     role_id INT,
