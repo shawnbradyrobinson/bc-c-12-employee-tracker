@@ -1,4 +1,4 @@
-const mainInquire = require("./inquirer-files/inquirer.js");
+const mainInquire = require("./inquirer-files/mainInquirer");
 const startDB = require("./inquirer-files/start-db.js");
 const fs = require("fs"); 
 

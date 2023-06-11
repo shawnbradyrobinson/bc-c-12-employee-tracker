@@ -16,7 +16,7 @@ function viewAllRoles(){
         if (err){
             console.log(err);
         }
-        console.log(mysql.format(result));
+        console.log(mysql.format(sql, result));
     });
 
 };
