@@ -16,7 +16,7 @@ function viewAllEmployees(){
         if (err){
             console.log(err);
         }
-        console.log(result);
+        console.table(result);
     });
 }
 

@@ -27,7 +27,7 @@ function addADepartment(){
         if (err){
             console.log(err);
         }
-        console.log(result);
+        console.table(result);
          });
          db.query(`SELECT * FROM departments`, (err, result) => {
          if (err){
